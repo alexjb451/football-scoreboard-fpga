@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'Clock'
+Slack : -5.277
+TNS   : -120.109
+
+Type  : Slow 1100mV 85C Model Setup 'timer_module:inst1|toggle'
+Slack : -2.422
+TNS   : -143.749
+
+Type  : Slow 1100mV 85C Model Hold 'timer_module:inst1|toggle'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Clock'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -0.407
+TNS   : -24.151
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'timer_module:inst1|toggle'
+Slack : -0.394
+TNS   : -48.567
+
+Type  : Slow 1100mV 0C Model Setup 'Clock'
+Slack : -5.387
+TNS   : -117.716
+
+Type  : Slow 1100mV 0C Model Setup 'timer_module:inst1|toggle'
+Slack : -2.435
+TNS   : -140.561
+
+Type  : Slow 1100mV 0C Model Hold 'timer_module:inst1|toggle'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Clock'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -0.448
+TNS   : -26.099
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'timer_module:inst1|toggle'
+Slack : -0.394
+TNS   : -47.950
+
+Type  : Fast 1100mV 85C Model Setup 'Clock'
+Slack : -3.275
+TNS   : -52.857
+
+Type  : Fast 1100mV 85C Model Setup 'timer_module:inst1|toggle'
+Slack : -1.071
+TNS   : -61.498
+
+Type  : Fast 1100mV 85C Model Hold 'timer_module:inst1|toggle'
+Slack : 0.108
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Clock'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -0.485
+TNS   : -4.507
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'timer_module:inst1|toggle'
+Slack : -0.035
+TNS   : -0.575
+
+Type  : Fast 1100mV 0C Model Setup 'Clock'
+Slack : -2.856
+TNS   : -44.984
+
+Type  : Fast 1100mV 0C Model Setup 'timer_module:inst1|toggle'
+Slack : -0.956
+TNS   : -53.038
+
+Type  : Fast 1100mV 0C Model Hold 'timer_module:inst1|toggle'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Clock'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -0.497
+TNS   : -4.499
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'timer_module:inst1|toggle'
+Slack : 0.009
+TNS   : 0.000
+
+------------------------------------------------------------

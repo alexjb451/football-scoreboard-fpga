@@ -1,0 +1,53 @@
+`include "dff.v"
+
+module game_clock_DFF(toggle, reset, viewToggle, possession, timer, timer2);
+    input toggle, reset, possession, viewToggle;
+    output [6:0] timer;
+    output [6:0] timer2;
+
+    reg [9:0] counter;
+    reg [9:0] game_clock;
+    reg prev_possession;
+
+    wire [9:0] counter_dff_out;
+    wire [9:0] game_clock_dff_out;
+
+    initial begin
+        counter = 600;
+        game_clock = 15;
+        prev_possession = 0;
+    end
+
+    always @(posedge toggle or posedge reset) begin
+        if (reset) begin
+            counter = 600;
+            game_clock = 15;
+            prev_possession = 0;
+        end else begin
+            if (counter > 0)
+                counter = counter - 1;
+
+            if (game_clock > 0)
+                game_clock = game_clock - 1;
+
+            if (possession && !prev_possession)
+                game_clock = 15;
+
+            prev_possession = possession;
+        end
+    end
+
+    genvar j;
+    generate
+        for (j = 0; j < 10; j = j + 1) begin: counter_dffs
+            dff d_counter(toggle, reset, counter[j], counter_dff_out[j]);
+        end
+        for (j = 0; j < 10; j = j + 1) begin: gameclock_dffs
+            dff d_game_clock(toggle, reset, game_clock[j], game_clock_dff_out[j]);
+        end
+    endgenerate
+
+    assign timer = counter_dff_out[6:0];
+    assign timer2 = game_clock_dff_out[6:0];
+
+endmodule

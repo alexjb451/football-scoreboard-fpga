@@ -1,0 +1,225 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "possessionIndicator1",
+					"strict" : false
+				},
+				{
+					"name" : "possessionIndicator2",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock6",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock5",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock4",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock3",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock2",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock1",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock0",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock26",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock25",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock24",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock23",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock22",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock21",
+					"strict" : false
+				},
+				{
+					"name" : "gameClock20",
+					"strict" : false
+				},
+				{
+					"name" : "score1ones[6]",
+					"strict" : false
+				},
+				{
+					"name" : "score1ones[5]",
+					"strict" : false
+				},
+				{
+					"name" : "score1ones[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score1ones[3]",
+					"strict" : false
+				},
+				{
+					"name" : "score1ones[2]",
+					"strict" : false
+				},
+				{
+					"name" : "score1ones[1]",
+					"strict" : false
+				},
+				{
+					"name" : "score1ones[0]",
+					"strict" : false
+				},
+				{
+					"name" : "score1tens[6]",
+					"strict" : false
+				},
+				{
+					"name" : "score1tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "score1tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score1tens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "score1tens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "score1tens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "score1tens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "score2ones[6]",
+					"strict" : false
+				},
+				{
+					"name" : "score2ones[5]",
+					"strict" : false
+				},
+				{
+					"name" : "score2ones[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score2ones[3]",
+					"strict" : false
+				},
+				{
+					"name" : "score2ones[2]",
+					"strict" : false
+				},
+				{
+					"name" : "score2ones[1]",
+					"strict" : false
+				},
+				{
+					"name" : "score2ones[0]",
+					"strict" : false
+				},
+				{
+					"name" : "score2tens[6]",
+					"strict" : false
+				},
+				{
+					"name" : "score2tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "score2tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "score2tens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "score2tens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "score2tens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "score2tens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PlayClockToggle",
+					"strict" : false
+				},
+				{
+					"name" : "ExtraPoint",
+					"strict" : false
+				},
+				{
+					"name" : "TwoPointConversion",
+					"strict" : false
+				},
+				{
+					"name" : "possession_override",
+					"strict" : false
+				},
+				{
+					"name" : "FieldGoal",
+					"strict" : false
+				},
+				{
+					"name" : "Safety",
+					"strict" : false
+				},
+				{
+					"name" : "reset_game",
+					"strict" : false
+				},
+				{
+					"name" : "Touchdown",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "clock_pause",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
