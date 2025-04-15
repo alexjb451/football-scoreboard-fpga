@@ -1,0 +1,69 @@
+# Quartus Prime generated files
+*.rpt
+*.qpf
+*.qsf
+*.smsg
+*.summary
+*.done
+*.chg
+*.pin
+*.jdi
+*.qws
+*.sld
+*.pof
+*.sof
+*.jic
+*.jbc
+*.map
+*.fit.*
+*.sta.*
+*.asm.*
+*.vhd.bak
+*.bak
+*.log
+*.smsg
+*.eqn
+*.tan
+*.vqm
+*.vho
+*.vhd
+*.ddb
+*.sdc
+*.qip
+*.qsys
+*.bdf
+*.cdf
+*.wsp
+*.psm
+
+# Simulation output
+sim/
+
+# System files
+*.DS_Store
+Thumbs.db
+
+# Ignore Quartus database folders
+db/
+incremental_db/
+simulation/
+output_files/
+
+# Ignore user-specific settings
+*.lps
+*.sopcinfo
+*.svd
+*.swf
+*.bak
+*.tmp
+
+# Ignore compiled binary or ELF files
+*.elf
+*.hex
+*.bin
+*.obj
+*.o
+
+# Ignore generated Verilog files (if applicable)
+*_sim.v
+*_tb.v
