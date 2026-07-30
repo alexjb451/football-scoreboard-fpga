@@ -1,10 +1,21 @@
-module scoring_mechanism_DFF(touchdown, extraPoint, twoPointConversion, fieldGoal, safety, manual_possession, clock, reset, possession, score1tens, score1ones, score2tens, score2ones);
-    input touchdown, extraPoint, twoPointConversion, fieldGoal, safety, manual_possession, reset, clock;
-    output reg possession;
-    output [3:0] score1tens;
-    output [3:0] score1ones;
-    output [3:0] score2tens;
-    output [3:0] score2ones;
+`default_nettype none
+`timescale 1ns/1ps
+
+module scoring_mechanism_DFF (
+    input wire touchdown,
+    input wire extraPoint,
+    input wire twoPointConversion,
+    input wire fieldGoal,
+    input wire safety,
+    input wire manual_possession,
+    input wire clock,
+    input wire reset,
+    output reg possession,
+    output wire [3:0] score1tens,
+    output wire [3:0] score1ones,
+    output wire [3:0] score2tens,
+    output wire [3:0] score2ones
+);
 
     wire [6:0] score1;
     wire [6:0] score2;
@@ -36,17 +47,17 @@ module scoring_mechanism_DFF(touchdown, extraPoint, twoPointConversion, fieldGoa
         score1_next = score1;
         score2_next = score2;
 
-        if (touchdown_edge) begin
+        if (touchdown_edge && !waiting_for_conversion) begin
             if (possession)
                 score2_next = score2 + 6;
             else
                 score1_next = score1 + 6;
-        end else if (extraPoint_edge) begin
+        end else if (extraPoint_edge && waiting_for_conversion) begin
             if (possession)
                 score2_next = score2 + 1;
             else
                 score1_next = score1 + 1;
-        end else if (twoPointConversion_edge) begin
+        end else if (twoPointConversion_edge && waiting_for_conversion) begin
             if (possession)
                 score2_next = score2 + 2;
             else
@@ -67,18 +78,25 @@ module scoring_mechanism_DFF(touchdown, extraPoint, twoPointConversion, fieldGoa
     always @(posedge clock or posedge reset) begin
         if (reset) begin
             possession <= 1'b0;
-            waiting_for_conversion <= 0;
+            waiting_for_conversion <= 1'b0;
         end else begin
-            if (manual_possession_edge)
+            if (manual_possession_edge) begin
                 possession <= ~possession;
-            else if ((extraPoint_edge || twoPointConversion_edge) && waiting_for_conversion) begin
+                waiting_for_conversion <= 1'b0;
+            end else if (
+                (extraPoint_edge || twoPointConversion_edge)
+                && waiting_for_conversion
+            ) begin
                 possession <= ~possession;
-                waiting_for_conversion <= 0;
-            end else if ((fieldGoal_edge || safety_edge) && !waiting_for_conversion)
+                waiting_for_conversion <= 1'b0;
+            end else if (
+                (fieldGoal_edge || safety_edge)
+                && !waiting_for_conversion
+            ) begin
                 possession <= ~possession;
-
-            if (touchdown_edge)
-                waiting_for_conversion <= 1;
+            end else if (touchdown_edge && !waiting_for_conversion) begin
+                waiting_for_conversion <= 1'b1;
+            end
         end
     end
 
@@ -88,3 +106,5 @@ module scoring_mechanism_DFF(touchdown, extraPoint, twoPointConversion, fieldGoa
     assign score2ones = score2 % 10;
 
 endmodule
+
+`default_nettype wire

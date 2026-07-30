@@ -37,7 +37,9 @@
 *.psm
 
 # Simulation output
+build/
 sim/
+*.vcd
 
 # System files
 *.DS_Store
@@ -64,6 +66,6 @@ output_files/
 *.obj
 *.o
 
-# Ignore generated Verilog files (if applicable)
-*_sim.v
-*_tb.v
+# Keep source and self-checking testbenches under version control.
+!FootballScoreboardProject.qpf
+!FootballScoreboardProject.qsf

@@ -1,8 +1,12 @@
-module my_dff(clk, rst, d, q);
-    input clk;
-    input rst;
-    input d;
-    output reg q;
+`default_nettype none
+`timescale 1ns/1ps
+
+module my_dff (
+    input wire clk,
+    input wire rst,
+    input wire d,
+    output reg q
+);
 
     always @(posedge clk or posedge rst) begin
         if (rst)
@@ -11,3 +15,5 @@ module my_dff(clk, rst, d, q);
             q <= d;
     end
 endmodule
+
+`default_nettype wire
